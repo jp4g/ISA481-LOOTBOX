@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoCase front-end</title>
+    <script language="javascript" type="text/javascript" src="cryptoCase_abi.js"></script>
+  </head>
+  <body>
+
+        <h2>HTML Buttons</h2>
+        <p>HTML buttons are defined with the button tag:</p>
+        
+        <button>Click me</button>
+
+    <script>
+
+    import Web3 from 'web3';
+
+    const rpcURL = "ropsten.infura.io/v3/6f024041dcfa42509ac7a7f1a047c118";
+
+    const account = "0x3d96FD9Ce3e9480B0b998047D879c5CeC141340e";
+
+    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider(rpcURL), null, {});
+
+    </script>
+  </body>
+</html>

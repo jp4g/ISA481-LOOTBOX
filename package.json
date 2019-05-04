@@ -1,0 +1,19 @@
+{
+  "name": "isa481-lootbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cryptoCase_abi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jp4g/ISA481-LOOTBOX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jp4g/ISA481-LOOTBOX/issues"
+  },
+  "homepage": "https://github.com/jp4g/ISA481-LOOTBOX#readme"
+}
