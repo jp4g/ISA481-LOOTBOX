@@ -48,9 +48,9 @@
 				web3 = new Web3(web3.currentProvider);
 			} else {
 					// set the provider you want from Web3.providers
-				web3 = new Web3(new Web3.providers.WebsocketProvider("kovan.infura.io/v3/6f024041dcfa42509ac7a7f1a047c118"));
+				web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 			}
-			web3 = new Web3(new Web3.providers.WebsocketProvider("kovan.infura.io/v3/6f024041dcfa42509ac7a7f1a047c118"));
+			web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 			/* Get Node Info */
 			web3.eth.getNodeInfo(function(error, result){
 				if(error){
@@ -63,19 +63,21 @@
 			});
 			
 			/*Get Balance */
+
+			const nodeAdd = "0x29488294BFA315f014ba99A1Be459D06dC73A750";
 			web3.eth.getAccounts(function(error, accounts) {
 				if(error) {
 					console.log(error);
 				}
-				$('#Account').val(accounts[0]);
-				web3.eth.getBalance(accounts[0]).then(function(result){
+				$('#Account').val(nodeAdd);
+				web3.eth.getBalance(nodeAdd).then(function(result){
 					console.log( "Balance : " ,web3.utils.fromWei(result, 'ether'));
 					$('#Balance').val(web3.utils.fromWei(result, 'ether'));
 				});
 			});
 			
 			$('#checkBalance').click(function() {
-			    var _account = $('#Account').val();
+			    var _account = nodeAdd
 				web3.eth.getBalance(_account).then(function(result){
 					console.log( "Balance : " ,web3.utils.fromWei(result, 'ether'));
 					$('#Balance').val(web3.utils.fromWei(result, 'ether'));
