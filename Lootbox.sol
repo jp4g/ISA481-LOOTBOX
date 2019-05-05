@@ -1,6 +1,4 @@
 pragma solidity ^0.5.7;
-import "./SwordOwnership.sol";
-import "./Sword.sol";
 
 contract LootBox is SwordOwnership {
     uint256 price = 0.1 ether;
