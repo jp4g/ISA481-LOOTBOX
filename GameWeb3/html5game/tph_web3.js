@@ -1,5 +1,4 @@
-
-function init(i)
+function init()
 {
 if (typeof web3 !== 'undefined') {
     web3 = new Web3(web3.currentProvider);
@@ -19,7 +18,6 @@ web3.eth.getNodeInfo(function(error, result){
     }
 });
 }
-
 
 function getBalance(account)
 {
