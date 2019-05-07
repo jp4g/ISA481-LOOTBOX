@@ -32,17 +32,14 @@ function getBalance(account)
     {
         ethId = "0x998b445cA5057E8738aD107951D882c054Cf68ED";
     }
-
-    /*Get Balance */
-			web3.eth.getAccounts(function(error, accounts) {
-				if(error) {
-					console.log(error);
-				}
-				web3.eth.getBalance(ethId).then(function(result){
-
-					return val(web3.utils.fromWei(result, 'ether'));
-				});
-			});
+	if(web3.eth.getBalance(ethId) != undefined)
+	{
+	web3.eth.getBalance(ethId)
+	.then(function (balance)
+	{
+		console.log(balance);
+		return balance;
+	});
+	}
 			
 }
-
