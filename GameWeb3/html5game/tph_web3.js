@@ -22,6 +22,7 @@ web3.eth.getNodeInfo(function(error, result){
 function getBalance(account)
 {
     var ethId;
+    var returnBalance;
 
     if(account == 1)
     {
