@@ -1,4 +1,5 @@
 pragma solidity ^0.5.7;
+
 import "./ILootBox.sol";
 import "./SwordToken.sol";
 import "http://github.com/OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol";

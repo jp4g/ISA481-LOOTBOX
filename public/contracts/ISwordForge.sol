@@ -43,11 +43,20 @@ contract ISwordForge {
      * View a Sword's components
      * @dev Materials should return uint [0-3] for [WOOD, STONE, IRON, DIAMOND]
      * @param _id the id of the sword being searched for
-     * @param grip the Material of the grip
-     * @param crossguard the Material of the crossguard
-     * @param blade the Material of the blade
+     * @return grip the Material of the grip
+     * @return crossguard the Material of the crossguard
+     * @return blade the Material of the blade
      **/
     function getSword(uint _id) public view returns (Material grip, Material crossguard, Material blade);
+    
+    /**
+     * View a Sword's components in numerical form
+     * @param _id the id of the sword being searched for
+     * @return grip the id of the Material of the grip
+     * @return crossguard the id of the Material of the crossguard
+     * @return blade the id of the Material of the blade
+     **/
+    function getSwordNumerical(uint _id) public view returns (uint8 grip, uint8 crossguard, uint8 blade);
     
     /**
      * View the odds that determine the composition of a new Sword
@@ -60,4 +69,3 @@ contract ISwordForge {
         return (WOOD_RATE, STONE_RATE, IRON_RATE, DIAMOND_RATE);
     }
 }
-    

@@ -11,7 +11,7 @@ contract Contributers {
 
 contract ILootBox is Contributers {
     
-    uint256 internal constant PRICE = 0.1 ether;
+    uint256 internal constant PRICE = 0.02 ether;
     
     event newLootBox(address _at, address _swordTokenContract, address owner);
     event lootBoxOpened(address owner, uint _swordID);
@@ -51,4 +51,3 @@ contract ILootBox is Contributers {
         return PRICE;
     }
 }
-

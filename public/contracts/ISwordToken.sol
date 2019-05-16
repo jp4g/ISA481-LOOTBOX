@@ -16,6 +16,11 @@ contract ISwordToken {
     function forge(address to) public returns (uint);
     
     /**
+     * 
+     **/
+     
+    
+    /**
      * @dev Gets the token name.
      * @return string representing the token name
      */
@@ -30,4 +35,6 @@ contract ISwordToken {
     function symbol() external pure returns (string memory) {
         return _symbol;
     }
+    
+    
 }
